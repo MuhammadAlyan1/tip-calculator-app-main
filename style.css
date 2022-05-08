@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0px;
+  text-align: center;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+}
+
+h1:nth-child(1) {
+  margin-top: 3rem;
+}
+
+h1:nth-child(2) {
+  margin-bottom: 3rem;
+}
+
+/* .bill-container */
+
+.bill-container {
+  background-color: var(--very-light-grayish-cyan);
+  padding: 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* bill */
+
+.bill p {
+  color: var(--dark-grayish-cyan);
+}
+
+.bill input {
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}
+
+/* tip container */
+
+.tip-container p {
+  color: var(--dark-grayish-cyan);
+}
+
+/* button */
+button {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  background-color: var(--very-dark-cyan);
+  border: none;
+  color: var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2px;
+  font-weight: 700;
+}
+
+.buttonClicked {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+/* input */
+
+input {
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  background-color: var(--light-grayish-cyan);
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  border: none;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* people */
+
+.people p {
+  color: var(--dark-grayish-cyan);
+}
+
+.people input {
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}
+
+/* result-container */
+.result-container {
+  padding: 1rem;
+  background-color: var(--very-dark-cyan);
+  border-radius: 20px;
+}
+
+.result-container p:nth-child(1) {
+  color: var(--very-light-grayish-cyan);
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.result-container p:nth-child(2) {
+  color: var(--grayish-cyan);
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+.result-container p:nth-child(3) {
+  color: var(--strong-cyan);
+  font-size: 2rem;
+}
+
+.result-container button {
+  background-color: var(--strong-cyan);
+}
+
+/* mobile layout */
+
+@media (max-width: 799px) {
+  /* bill */
+  .bill p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .bill input {
+    width: 100%;
+    height: 3rem;
+  }
+
+  /* tip-container */
+  .tip-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tip-container p {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* button-div */
+  .button-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .button-div button {
+    width: 100%;
+    height: 3rem;
+  }
+
+  .button-div input {
+    width: 100%;
+  }
+
+  /* people */
+  .people p {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  .people input {
+    width: 100%;
+    height: 3rem;
+  }
+
+  /* result-container  */
+
+  .result-container {
+    margin-top: 2rem;
+  }
+
+  .tip-amount {
+    position: relative;
+  }
+
+  .tip-amount #tip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .total-amount {
+    position: relative;
+  }
+
+  .total-amount #total {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .result-container button {
+    width: 100%;
+    color: var(--very-dark-cyan);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  /* bill container */
+  .bill-container {
+    border-radius: 20px;
+    max-width: 900px;
+    display: grid;
+    grid-template-areas: "left-side result-container";
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 0 auto;
+  }
+
+  .left-side {
+    grid-area: "left-side";
+  }
+
+  .result-container {
+    grid-area: "result-container";
+  }
+
+  /* bill */
+  .bill p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .bill input {
+    width: 100%;
+    height: 3rem;
+  }
+
+  /* tip-container */
+  .tip-container {
+    margin-top: 3rem;
+  }
+
+  .tip-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .button-div {
+    display: grid;
+    grid-template-columns: 31% 31% 30.5%;
+    gap: 1rem;
+  }
+
+  .button-div button {
+    width: 100%;
+    height: 50px;
+  }
+
+  /* people */
+  .people {
+    margin-top: 3rem;
+  }
+  .people p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .people input {
+    width: 100%;
+    height: 3rem;
+  }
+
+  /* result-container */
+
+  .tip-amount {
+    position: relative;
+  }
+
+  .tip-amount #tip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px;
+  }
+
+  .total-amount {
+    position: relative;
+  }
+
+  .total-amount #total {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px;
+  }
+
+  #reset {
+    height: 3rem;
+    width: 100%;
+    color: var(--very-dark-cyan);
+    margin-top: 14.5rem;
+  }
+}
